@@ -3,7 +3,6 @@ package ru.skillbranch.devintensive
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
@@ -25,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ac_main)
 
-        etMsg = et_msg
+        etMsg = et_message
         ivSend = iv_send
         tvAns = tv_text
         ivBender = iv_bender
