@@ -68,9 +68,9 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun changeTheme(isNightTheme: Boolean) {
         if(isNightTheme) {
-            delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_YES
+            delegate.setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         } else{
-            delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_NO
+            delegate.setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
     }
 

@@ -1,6 +1,6 @@
 package ru.skillbranch.devintensive.repositories
 
-import androidx.preference.PreferenceManager
+import android.preference.PreferenceManager
 import ru.skillbranch.devintensive.App
 import ru.skillbranch.devintensive.models.Profile
 import java.lang.Exception
