@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Chat Dev-intensive</string>
+    <string name="profile_label_rating">Рейтинг</string>
+    <string name="profile_label_respect">Уважение</string>
+    <string name="profile_hint_repository">Репозиторий</string>
+    <string name="profile_hint_about">О себе</string>
+    <string name="profile_hint_last_name">Фамилия</string>
+    <string name="profile_hint_first_name">Имя</string>
+    <string name="metrics.label.respect">Уважение</string>
+    <string name="metrics.label.rating">Рейтинг</string>
+    <string name="info.first_name.et_hint">Имя</string>
+    <string name="info.last_name.et_hint">Фамилия</string>
+    <string name="info.about.hint">О себе</string>
+    <string name="info.repo.et_hint">Репозиторий</string>
+</resources>
