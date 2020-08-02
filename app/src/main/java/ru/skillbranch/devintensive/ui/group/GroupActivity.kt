@@ -22,7 +22,7 @@ import ru.skillbranch.devintensive.ui.adapters.UserAdapter
 import ru.skillbranch.devintensive.ui.main.MainActivity
 import ru.skillbranch.devintensive.viewmodels.GroupViewModel
 
-class GroupActivicty : AppCompatActivity() {
+class GroupActivity : AppCompatActivity() {
 
     private lateinit var viewModel: GroupViewModel
     private lateinit var userAdapter: UserAdapter
@@ -67,7 +67,7 @@ class GroupActivicty : AppCompatActivity() {
         val divider = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
         with(rv_user_list){
             adapter = userAdapter
-            layoutManager = LinearLayoutManager(this@GroupActivicty)
+            layoutManager = LinearLayoutManager(this@GroupActivity)
             addItemDecoration(divider)
         }
 
