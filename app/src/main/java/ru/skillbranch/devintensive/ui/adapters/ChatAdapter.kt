@@ -15,13 +15,13 @@ import java.lang.Exception
 
 class ChatAdapter : RecyclerView.Adapter<BaseViewHolder>() {
 
-    var items: List<IBaseItem> = listOf()
+    var items: List<ChatItem> = listOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val view = inflater.inflate(viewType, parent, false)
         return when (viewType) {
-            R.layout.single_chat_item -> SingleViewHolder(view)
+            R.layout.single_chat_item -> ChatItemViewHolder(view)
             R.layout.group_chat_item -> GroupViewHolder(view)
             else -> throw Exception("Invalid argument at ChatAdapter.onCreateViewHolder")
         }
@@ -39,7 +39,7 @@ class ChatAdapter : RecyclerView.Adapter<BaseViewHolder>() {
 
         val diffCallback = object : DiffUtil.Callback() {
             override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-                return (items[oldItemPosition] as ChatItem).id == newItems[newItemPosition].id
+                return items[oldItemPosition].id == newItems[newItemPosition].id
             }
 
             override fun getOldListSize() = items.size
@@ -47,7 +47,7 @@ class ChatAdapter : RecyclerView.Adapter<BaseViewHolder>() {
             override fun getNewListSize() = newItems.size
 
             override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-                return (items[oldItemPosition] as ChatItem).hashCode() == newItems[newItemPosition].hashCode()
+                return items[oldItemPosition].hashCode() == newItems[newItemPosition].hashCode()
             }
         }
 
@@ -57,7 +57,7 @@ class ChatAdapter : RecyclerView.Adapter<BaseViewHolder>() {
         diffResult.dispatchUpdatesTo(this)
     }
 
-    class SingleViewHolder(itemView: View) : BaseViewHolder(itemView) {
+    class ChatItemViewHolder(itemView: View) : BaseViewHolder(itemView) {
 
         override fun bind(item: IBaseItem) {
             with(itemView) {

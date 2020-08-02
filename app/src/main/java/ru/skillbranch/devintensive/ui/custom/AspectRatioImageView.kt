@@ -1,13 +1,7 @@
 package ru.skillbranch.devintensive.ui.custom
 
-import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
 import android.util.AttributeSet
-import android.util.Log
-import android.widget.ImageView
 import ru.skillbranch.devintensive.R
 
 class AspectRatioImageView @JvmOverloads constructor(

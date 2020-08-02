@@ -18,7 +18,7 @@ import java.lang.Exception
 
 class UserAdapter(val listener: (UserItem) -> Unit) : RecyclerView.Adapter<BaseViewHolder>() {
 
-    var items: List<IBaseItem> = listOf()
+    var items: List<UserItem> = listOf()
 
     override fun getItemViewType(position: Int): Int {
         return items[position].getLayoutId()
@@ -42,7 +42,7 @@ class UserAdapter(val listener: (UserItem) -> Unit) : RecyclerView.Adapter<BaseV
     fun update(newItems: List<UserItem>) {
         val diffCallback = object : DiffUtil.Callback() {
             override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-                return (items[oldItemPosition] as UserItem).id == newItems[newItemPosition].id
+                return items[oldItemPosition].id == newItems[newItemPosition].id
             }
 
             override fun getOldListSize() = items.size
@@ -50,8 +50,8 @@ class UserAdapter(val listener: (UserItem) -> Unit) : RecyclerView.Adapter<BaseV
             override fun getNewListSize() = newItems.size
 
             override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-                Log.d("areContentsTheSame:", "old ${(items[oldItemPosition] as UserItem)}\nnew ${newItems[newItemPosition]}")
-                return (items[oldItemPosition] as UserItem).hashCode() == newItems[newItemPosition].hashCode()
+                Log.d("areContentsTheSame:", "old ${items[oldItemPosition]}\nnew ${newItems[newItemPosition]}")
+                return items[oldItemPosition].hashCode() == newItems[newItemPosition].hashCode()
             }
         }
 
