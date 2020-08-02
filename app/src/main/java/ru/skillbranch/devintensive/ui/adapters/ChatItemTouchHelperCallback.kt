@@ -152,3 +152,20 @@ interface ItemTouchHelperHolder {
     fun onItemSelected()
     fun onItemCleared()
 }
+
+interface IBaseItem {
+    fun getLayoutId(): Int
+}
+
+abstract class BaseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
+    ItemTouchHelperHolder {
+    abstract fun bind(item: IBaseItem)
+
+    override fun onItemCleared() {
+        itemView.setBackgroundColor(Color.WHITE)
+    }
+
+    override fun onItemSelected() {
+        itemView.setBackgroundColor(Color.LTGRAY)
+    }
+}
