@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AspectRatioImageView">
+        <attr name="aspectRatio" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="AvatarImageView">
+        <attr name="avatar_initials" format="string"/>
+        <attr name="avatar_border_width" format="dimension"/>
+        <attr name="avatar_border_color" format="color"/>
+    </declare-styleable>
+
+    <attr name="colorAccentedSurface" format="reference"/>
+    <attr name="colorDivider" format="reference"/>
+    <attr name="colorIcon" format="reference"/>
+
+</resources>
