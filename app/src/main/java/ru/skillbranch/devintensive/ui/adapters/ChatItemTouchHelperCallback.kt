@@ -5,6 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import ru.skillbranch.devintensive.R
+import ru.skillbranch.devintensive.utils.IBaseItem
 import kotlin.math.abs
 
 class ChatItemTouchHelperCallback(
@@ -151,21 +152,4 @@ class ChatItemTouchHelperCallback(
 interface ItemTouchHelperHolder {
     fun onItemSelected()
     fun onItemCleared()
-}
-
-interface IBaseItem {
-    fun getLayoutId(): Int
-}
-
-abstract class BaseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
-    ItemTouchHelperHolder {
-    abstract fun bind(item: IBaseItem)
-
-    override fun onItemCleared() {
-        itemView.setBackgroundColor(Color.WHITE)
-    }
-
-    override fun onItemSelected() {
-        itemView.setBackgroundColor(Color.LTGRAY)
-    }
 }

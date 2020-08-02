@@ -1,8 +1,7 @@
 package ru.skillbranch.devintensive.models.data
 
 import ru.skillbranch.devintensive.R
-import ru.skillbranch.devintensive.ui.adapters.ChatAdapter
-import ru.skillbranch.devintensive.ui.adapters.IBaseItem
+import ru.skillbranch.devintensive.utils.IBaseItem
 import java.lang.Exception
 
 

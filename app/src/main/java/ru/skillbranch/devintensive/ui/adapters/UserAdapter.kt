@@ -4,17 +4,16 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.single_chat_item.view.*
 import kotlinx.android.synthetic.main.single_chat_item.view.iv_icon_avatar
 import kotlinx.android.synthetic.main.single_chat_item.view.online_indicator
 import kotlinx.android.synthetic.main.single_chat_item.view.tv_chat_name
 import kotlinx.android.synthetic.main.user_item.view.*
 import ru.skillbranch.devintensive.R
-import ru.skillbranch.devintensive.models.data.ChatItem
 import ru.skillbranch.devintensive.models.data.UserItem
+import ru.skillbranch.devintensive.utils.BaseViewHolder
+import ru.skillbranch.devintensive.utils.IBaseItem
 import java.lang.Exception
 
 class UserAdapter(val listener: (UserItem) -> Unit) : RecyclerView.Adapter<BaseViewHolder>() {

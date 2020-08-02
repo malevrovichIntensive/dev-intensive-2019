@@ -1,6 +1,5 @@
 package ru.skillbranch.devintensive.ui.adapters
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +9,8 @@ import kotlinx.android.synthetic.main.group_chat_item.view.*
 import kotlinx.android.synthetic.main.single_chat_item.view.*
 import ru.skillbranch.devintensive.R
 import ru.skillbranch.devintensive.models.data.ChatItem
+import ru.skillbranch.devintensive.utils.BaseViewHolder
+import ru.skillbranch.devintensive.utils.IBaseItem
 import java.lang.Exception
 
 class ChatAdapter : RecyclerView.Adapter<BaseViewHolder>() {

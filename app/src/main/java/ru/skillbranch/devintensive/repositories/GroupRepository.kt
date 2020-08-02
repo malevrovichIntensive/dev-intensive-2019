@@ -8,8 +8,7 @@ import ru.skillbranch.devintensive.utils.DataGenerator
 import ru.skillbranch.devintensive.utils.Utils
 
 object GroupRepository {
-
-    val users = DataGenerator.stabUsers
+    private val users = DataGenerator.stabUsers
 
     fun loadUsers(): List<User> = users
 

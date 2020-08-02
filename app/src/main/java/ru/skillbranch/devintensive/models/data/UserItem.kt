@@ -1,7 +1,7 @@
 package ru.skillbranch.devintensive.models.data
 
 import ru.skillbranch.devintensive.R
-import ru.skillbranch.devintensive.ui.adapters.IBaseItem
+import ru.skillbranch.devintensive.utils.IBaseItem
 
 
 data class UserItem (
@@ -12,7 +12,7 @@ data class UserItem (
     var lastActivity:String,
     var isSelected : Boolean = false,
     var isOnline: Boolean = false
-): IBaseItem{
+): IBaseItem {
     override fun getLayoutId(): Int {
         return R.layout.user_item
     }
