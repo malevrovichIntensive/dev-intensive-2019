@@ -26,8 +26,8 @@ data class Chat(
     }
 
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
-    fun lastMessageShort(): Pair<String, String?> = when(val lastMessage = messages.lastOrNull()){
-        is TextMessage -> "${lastMessage.from.firstName ?: ""} ${lastMessage.from.lastName ?: ""}" to lastMessage.text
+    fun lastMessageShort(): Pair<String, String> = when(val lastMessage = messages.lastOrNull()){
+        is TextMessage -> (lastMessage.text ?: "Сообщений пока нет") to (lastMessage.from.firstName ?: "")
         else -> "${lastMessage?.from?.firstName ?: ""} ${lastMessage?.from?.lastName ?: ""}" to "${lastMessage?.from?.firstName ?: "некто"} - отправил фото"
     }
 

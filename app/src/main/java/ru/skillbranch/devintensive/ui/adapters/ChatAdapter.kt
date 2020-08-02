@@ -1,5 +1,6 @@
 package ru.skillbranch.devintensive.ui.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,6 +38,7 @@ class ChatAdapter : RecyclerView.Adapter<BaseViewHolder>() {
 
     fun updateData(newItems: List<ChatItem>) {
 
+        Log.d("updateData:" , "OLD: ${items.size} NEW: ${newItems.size}")
         val diffCallback = object : DiffUtil.Callback() {
             override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
                 return items[oldItemPosition].id == newItems[newItemPosition].id

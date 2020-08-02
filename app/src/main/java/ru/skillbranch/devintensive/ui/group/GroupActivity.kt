@@ -73,8 +73,7 @@ class GroupActivity : AppCompatActivity() {
 
         fab.setOnClickListener{
             viewModel.addGroup()
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 
